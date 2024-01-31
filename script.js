@@ -1,5 +1,6 @@
 let weather = {
   apiKey: "f327a81a2a120fd158a88e9528340ec5",
+
   fetchWeather: function (city) {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -16,6 +17,7 @@ let weather = {
       })
       .then((data) => this.displayWeather(data));
   },
+
   displayWeather: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -34,6 +36,7 @@ let weather = {
     document.body.style.backgroundImage =
       "url('https://source.unsplash.com/1600x900/?" + name + "')";
   },
+
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
   },
@@ -51,4 +54,4 @@ document
     }
   });
 
-weather.fetchWeather("Denver");
+weather.fetchWeather("Delhi");
