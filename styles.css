@@ -84,3 +84,10 @@ h1.temp {
   top: 0;
   left: 20px;
 }
+
+.link {
+  position: absolute;
+  top: 0;
+  background: #000000d0;
+  color: white;
+}
